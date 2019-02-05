@@ -6,6 +6,38 @@ Blog: https://medium.com/ag-grid/using-angular-forms-with-ag-grid-1efe00265535
 The original project, creates object of entity form where key is the order id and values are plain array. We have to match
 the index to get the value correctly.
 
+```json
+{
+"stock": {
+    "1": [
+      "Toyota",
+      "Celica",
+      35000
+    ],
+    "5": [
+      "Ford",
+      "Mondeo",
+      32000
+    ],
+    "7": [
+      "Porsche",
+      "Boxter",
+      72000
+    ],
+    "11": [
+      "Seat",
+      "Leon",
+      32000
+    ],
+    "20": [
+      "Honda",
+      "CRV",
+      35000
+    ]
+  }
+}
+```
+
 For my usecase, I needed array of row objects. This project is the slight modification of the above article.
 
 ```json
