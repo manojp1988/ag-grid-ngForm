@@ -99,12 +99,10 @@ export class GridComponent {
 
     this.api.forEachNode((rowNode: RowNode) => {
       const formGroup: FormGroup = new FormGroup({});
-      columns
-        .filter((column: Column) => column.getColDef().field !== 'orderNumber')
-        .forEach((column: Column) => {
-          const key = this.createKey(this.columnApi, column);
-          formGroup.setControl(key, new FormControl(rowNode.data[key]));
-        });
+      columns.forEach((column: Column) => {
+        const key = this.createKey(this.columnApi, column);
+        formGroup.setControl(key, new FormControl(rowNode.data[key]));
+      });
       stockFormArray.push(formGroup);
     });
   }

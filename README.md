@@ -45,26 +45,31 @@ For my usecase, I needed array of row objects. This project is the slight modifi
 {
   "stock": [
     {
+      "orderNumber": 1,
       "make": "Toyota",
       "model": "Celica",
       "price": 35000
     },
     {
+      "orderNumber": 5,
       "make": "Ford",
       "model": "Mondeo",
       "price": 32000
     },
     {
+      "orderNumber": 7,
       "make": "Porsche",
       "model": "Boxter",
       "price": 72000
     },
     {
+      "orderNumber": 11,
       "make": "Seat",
       "model": "Leon",
       "price": 32000
     },
     {
+      "orderNumber": 20,
       "make": "Honda",
       "model": "CRV",
       "price": 35000
