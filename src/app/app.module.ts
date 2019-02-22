@@ -8,7 +8,8 @@ import {
   MatFormFieldModule,
   MatInputModule,
   MatSelectModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatTabsModule
 } from '@angular/material';
 /* Flex */
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -16,15 +17,21 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AgGridModule } from 'ag-grid-angular';
 
 import { AppComponent } from './app.component';
-import { GridComponent } from './grid/grid.component';
-import { FormCellComponent } from './grid/form-cell/form-cell.component';
+import { HorizontalGridComponent } from './grid/horizontal-grid/horizontal-grid.component';
+import { FormCellComponent } from './grid/horizontal-grid/form-cell.component';
 import { BranchService } from './branch.service';
 import { EmployeeService } from './employee.service';
 import { VerticalGridComponent } from './grid/vertical-grid/vertical-grid.component';
 import { FormTextInputComponent } from './grid/vertical-grid/form-text-input.component';
 
 @NgModule({
-  declarations: [AppComponent, GridComponent, FormCellComponent, VerticalGridComponent, FormTextInputComponent],
+  declarations: [
+    AppComponent,
+    HorizontalGridComponent,
+    FormCellComponent,
+    VerticalGridComponent,
+    FormTextInputComponent
+  ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
@@ -34,6 +41,7 @@ import { FormTextInputComponent } from './grid/vertical-grid/form-text-input.com
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTabsModule,
     MatSelectModule,
     FlexLayoutModule,
     AgGridModule.withComponents([FormCellComponent, FormTextInputComponent])

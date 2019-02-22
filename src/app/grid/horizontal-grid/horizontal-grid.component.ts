@@ -3,45 +3,12 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
 
 import { Column, ColumnApi, GridApi, GridReadyEvent, RowNode } from 'ag-grid';
-import { FormCellComponent } from './form-cell/form-cell.component';
-import { BranchService } from '../branch.service';
+import { FormCellComponent } from './form-cell.component';
+import { BranchService } from '../../branch.service';
 
 @Component({
-  selector: 'app-grid',
-  template: `
-    <div class="container" fxLayout="column" fxLayoutAlign="start center">
-      <form
-        class="dealership-form"
-        fxLayout="column"
-        fxLayoutAlign="start center"
-        (ngSubmit)="onSubmit()"
-        [formGroup]="gridForm"
-      >
-        <ag-grid-angular
-          style="width: 700px; height: 300px;"
-          class="ag-theme-material"
-          [rowData]="rowData"
-          [columnDefs]="columnDefs"
-          [frameworkComponents]="getComponents()"
-          [context]="getContext()"
-          [getRowNodeId]="getRowNodeId"
-          (rowDataChanged)="refreshFormControls()"
-          (gridReady)="gridReady($event)"
-        >
-        </ag-grid-angular>
-        <button
-          style="margin-top: 10px; float: right;"
-          mat-raised-button
-          [disabled]="!gridForm.valid"
-          type="submit"
-        >
-          Submit
-        </button>
-      </form>
-    </div>
-
-    <pre> {{ gridForm.value | json }}</pre>
-  `,
+  selector: 'horizontal-grid',
+  templateUrl: './horizontal-grid.component.html',
   styles: [
     `
       .container {
@@ -50,7 +17,7 @@ import { BranchService } from '../branch.service';
     `
   ]
 })
-export class GridComponent {
+export class HorizontalGridComponent {
   private api: GridApi;
   private columnApi: ColumnApi;
 
