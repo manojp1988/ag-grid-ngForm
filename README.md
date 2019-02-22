@@ -1,39 +1,28 @@
 # ag-grid-ng-forms
+
 This is a fork project from https://github.com/seanlandsman/ag-grid-ng-forms
 
 Blog: https://medium.com/ag-grid/using-angular-forms-with-ag-grid-1efe00265535
+
+# Horizontal Table
+
+| Name  | Age | Gender | Phone     |
+| ----- | --- | ------ | --------- |
+| John  | 23  | M      | 2323434   |
+| Peter | 25  | M      | 342343214 |
+| Rose  | 23  | F      | 11134314  |
 
 The original project, creates object of entity form where key is the order id and values are plain array. We have to match
 the index to get the value correctly.
 
 ```json
 {
-"stock": {
-    "1": [
-      "Toyota",
-      "Celica",
-      35000
-    ],
-    "5": [
-      "Ford",
-      "Mondeo",
-      32000
-    ],
-    "7": [
-      "Porsche",
-      "Boxter",
-      72000
-    ],
-    "11": [
-      "Seat",
-      "Leon",
-      32000
-    ],
-    "20": [
-      "Honda",
-      "CRV",
-      35000
-    ]
+  "stock": {
+    "1": ["Toyota", "Celica", 35000],
+    "5": ["Ford", "Mondeo", 32000],
+    "7": ["Porsche", "Boxter", 72000],
+    "11": ["Seat", "Leon", 32000],
+    "20": ["Honda", "CRV", 35000]
   }
 }
 ```
@@ -41,7 +30,6 @@ the index to get the value correctly.
 For my usecase, I needed array of row objects. This project is the slight modification of the above article.
 
 ```json
-
 {
   "stock": [
     {
@@ -76,5 +64,14 @@ For my usecase, I needed array of row objects. This project is the slight modifi
     }
   ]
 }
-
 ```
+
+# Vertical Table
+
+Sample app to show how angular forms can be utilized to create vertical table. Here rows will static, where each row is a property. And user will be able to add new columns.
+
+| Name   | John   | Peter   | Rose  |
+| ------ | ------ | ------- | ----- |
+| Age    | 23     | 25      | 23    |
+| Gender | M      | M       | F     |
+| Phone  | 141341 | 3141413 | 34314 |
