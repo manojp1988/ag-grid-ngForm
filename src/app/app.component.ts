@@ -1,10 +1,9 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-root',
-    template: `
-        <app-grid></app-grid>
-    `
+  selector: 'app-root',
+  template: `
+    <vertical-grid><vertical-grid> </vertical-grid></vertical-grid>
+  `
 })
-export class AppComponent {
-}
+export class AppComponent {}

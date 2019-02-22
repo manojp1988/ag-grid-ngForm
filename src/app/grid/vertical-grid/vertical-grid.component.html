@@ -1,0 +1,15 @@
+<h1>It Works</h1>
+
+<ag-grid-angular style="width: 600px; height: 300px;"
+                 class="ag-theme-material"
+                 [enableColResize]="true"
+                 [context]="getContext()"
+                 [frameworkComponents]="frameworkComponents"
+                 [suppressMovableColumns]="true"
+                 [rowData]="rowData"
+                 [columnDefs]="columnDefs"
+                 (gridReady)="gridReady($event)">
+
+</ag-grid-angular>
+
+<pre>{{ form.value | json }} </pre>
