@@ -48,7 +48,7 @@ export class HorizontalGridComponent {
     this.api.sizeColumnsToFit();
   }
 
-  private refreshFormControls() {
+ refreshFormControls() {
     if (this.api) {
       this.createFormControls();
       this.api.refreshCells({ force: true });

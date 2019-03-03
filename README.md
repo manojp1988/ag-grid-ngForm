@@ -1,4 +1,4 @@
-# ag-grid-ng-forms
+# ag-grid-ng-forms [![Build Status](https://travis-ci.com/manojp1988/ag-grid-ngForm.svg?branch=master)](https://travis-ci.com/manojp1988/ag-grid-ngForm)
 
 This is a fork project from https://github.com/seanlandsman/ag-grid-ng-forms
 

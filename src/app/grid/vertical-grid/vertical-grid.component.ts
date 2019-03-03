@@ -14,8 +14,8 @@ export class VerticalGridComponent implements OnInit {
   name: string;
   private api: GridApi;
   private columnApi: ColumnApi;
-  private rowData: any[];
-  private columnDefs: ColDef[];
+  rowData: any[];
+  columnDefs: ColDef[];
 
   get employeesFormArray(): FormArray {
     return this.form.get('employees') as FormArray;
